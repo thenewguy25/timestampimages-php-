@@ -14,7 +14,8 @@ $result = mysqli_query($con,"SELECT * FROM image_table " );
 
 while($row = mysqli_fetch_array($result))
 {
-echo '<img src="' . $row['image'] . '" width="200" />';
+echo '<img src="' . $row['image'] . '" width="200" /><br>';
+echo $row['time'];
 echo'<br /><br />';  
 }
 

@@ -9,6 +9,8 @@ echo "The time is " . $timestamp;
 
 <input type="hidden" name="id" />
 
+<input type="hidden" name="time" value ="<?=$timestamp?>"/>
+
 <input type="file" name="uploadimage" /><br />
 
 <input type="submit" value="upload" />

@@ -2,6 +2,7 @@
 $target_Folder = "upload/";
 
 $uid = $_POST['id'];
+$time = $_POST['time'];
 
 $target_Path = $target_Folder.basename( $_FILES['uploadimage']['name'] );
 
@@ -25,8 +26,8 @@ $savepath = $target_Path.basename( $_FILES['uploadimage']['name'] );
             echo "Failed to connect to database" .     mysqli_connect_errno();
         }
 
-        $sql = "INSERT INTO image_table (image, image_name)
-                    VALUES     ('$target_Folder$file_name','$file_name') ";
+        $sql = "INSERT INTO image_table (image, image_name, time)
+                    VALUES     ('$target_Folder$file_name','$file_name', '$time') ";
         echo $sql.'<br>';
 
         if (!mysqli_query($con,$sql))
